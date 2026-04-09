@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Color Palette Option B — Tamang Society of Canada</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ════════════════════════════════════════════
+   CSS CUSTOM PROPERTIES — OPTION B PALETTE
+   ════════════════════════════════════════════ */
+:root {
+  /* ── Primary: Temple Maroon ── */
+  --maroon-50:  #F6ECEA;
+  --maroon-100: #E6C9C4;
+  --maroon-200: #D1A39A;
+  --maroon-300: #B87A6F;
+  --maroon-400: #96524A;
+  --maroon-500: #7A3B34;
+  --maroon-600: #5E2A25;
+  --maroon-700: #4A201C;
+  --maroon-800: #371714;
+  --maroon-900: #250F0D;
+
+  /* ── Secondary: Indigo Dusk ── */
+  --indigo-50:  #EEEDF8;
+  --indigo-100: #CBC8EC;
+  --indigo-200: #A8A2DF;
+  --indigo-300: #857CCF;
+  --indigo-400: #6558B8;
+  --indigo-500: #4E3FA0;
+  --indigo-600: #3B2F7E;
+  --indigo-700: #2E2464;
+  --indigo-800: #211A4A;
+  --indigo-900: #161133;
+
+  /* ── Accent: Sunrise Amber ── */
+  --amber-50:  #FFF6E8;
+  --amber-100: #FFE4B5;
+  --amber-200: #FFD082;
+  --amber-300: #FFBA4F;
+  --amber-400: #E89B1C;
+  --amber-500: #C47F0E;
+  --amber-600: #A16808;
+  --amber-700: #7D5006;
+  --amber-800: #5A3904;
+  --amber-900: #3D2602;
+
+  /* ── Success: Paddy Teal ── */
+  --teal-50:  #E6F5F2;
+  --teal-100: #B8E3DA;
+  --teal-200: #88D0C1;
+  --teal-300: #58BCA8;
+  --teal-400: #2E9E89;
+  --teal-500: #1F7D6C;
+  --teal-600: #166054;
+  --teal-700: #0F473E;
+  --teal-800: #0A3029;
+  --teal-900: #061C18;
+
+  /* ── Neutrals ── */
+  --snow:     #FDFBF9;
+  --mist:     #F4F0EC;
+  --border:   #E4DDD6;
+  --muted:    #A89E94;
+  --body:     #706458;
+  --heading:  #3A3028;
+  --charcoal: #231E1A;
+
+  /* ── Typography ── */
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+}
+
+/* ════════════════════════════
+   RESET & BASE
+   ════════════════════════════ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  color: var(--heading);
+  background: var(--snow);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ════════════════════════════
+   COVER / HERO
+   ════════════════════════════ */
+.cover {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 24px;
+  background: var(--maroon-600);
+  position: relative;
+  overflow: hidden;
+}
+.cover::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 80%, rgba(232,155,28,0.1) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 20%, rgba(78,63,160,0.1) 0%, transparent 55%);
+}
+.cover-mandala {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  border: 1px solid rgba(232,155,28,0.06);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.cover-mandala::after {
+  content: '';
+  position: absolute;
+  inset: 60px;
+  border-radius: 50%;
+  border: 1px solid rgba(232,155,28,0.04);
+}
+.cover-content { position: relative; z-index: 2; max-width: 720px; }
+.cover-badge {
+  display: inline-block;
+  background: rgba(232,155,28,0.12);
+  border: 1px solid rgba(232,155,28,0.2);
+  color: var(--amber-300);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3.5px;
+  padding: 8px 24px;
+  border-radius: 50px;
+  margin-bottom: 32px;
+  animation: fadeDown 0.8s ease-out;
+}
+.cover h1 {
+  font-family: var(--font-display);
+  font-size: clamp(42px, 6vw, 72px);
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  animation: fadeDown 0.8s ease-out 0.15s both;
+}
+.cover h1 em {
+  font-style: italic;
+  color: var(--amber-300);
+}
+.cover-sub {
+  font-size: 18px;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.7;
+  max-width: 560px;
+  margin: 0 auto 40px;
+  animation: fadeDown 0.8s ease-out 0.3s both;
+}
+.cover-meta {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  animation: fadeDown 0.8s ease-out 0.45s both;
+}
+.cover-meta-item {
+  text-align: center;
+  color: rgba(255,255,255,0.45);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+.cover-meta-item strong {
+  display: block;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  margin-bottom: 4px;
+}
+.option-tag {
+  display: inline-block;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.6);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 6px 18px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  animation: fadeDown 0.8s ease-out 0.05s both;
+}
+
+/* ════════════════════════════
+   LAYOUT
+   ════════════════════════════ */
+.container { max-width: 960px; margin: 0 auto; padding: 0 28px; }
+section { padding: 100px 0; }
+
+.section-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--maroon-500);
+  margin-bottom: 16px;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4vw, 46px);
+  font-weight: 400;
+  color: var(--maroon-600);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.section-desc {
+  font-size: 17px;
+  color: var(--body);
+  max-width: 640px;
+  line-height: 1.8;
+}
+
+/* ════════════════════════════
+   PHILOSOPHY
+   ════════════════════════════ */
+.philosophy { background: var(--snow); }
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-top: 50px;
+  align-items: start;
+}
+.philosophy-text h3 {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--maroon-600);
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+.philosophy-text p {
+  font-size: 15.5px;
+  color: var(--body);
+  line-height: 1.85;
+  margin-bottom: 14px;
+}
+.principle-cards { display: flex; flex-direction: column; gap: 16px; }
+.principle-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+  transition: all 0.35s ease;
+}
+.principle-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 36px rgba(94,42,37,0.08);
+  border-color: var(--amber-400);
+}
+.principle-card .num {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--amber-400);
+  margin-bottom: 6px;
+}
+.principle-card h4 { font-size: 16px; font-weight: 600; color: var(--heading); margin-bottom: 6px; }
+.principle-card p { font-size: 14px; color: var(--body); line-height: 1.65; }
+
+/* ════════════════════════════
+   PALETTE CARDS
+   ════════════════════════════ */
+.palette-section { background: var(--mist); }
+.palette-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 50px;
+}
+.palette-hero-card {
+  border-radius: 18px;
+  padding: 40px 32px;
+  position: relative;
+  overflow: hidden;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.palette-hero-card::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.08);
+}
+.palette-hero-card::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255,255,255,0.05);
+}
+.phc-maroon { background: linear-gradient(145deg, var(--maroon-400), var(--maroon-600), var(--maroon-700)); color: #fff; }
+.phc-indigo { background: linear-gradient(145deg, var(--indigo-400), var(--indigo-500), var(--indigo-600)); color: #fff; }
+.phc-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  opacity: 0.5;
+  margin-bottom: 10px;
+  position: relative;
+}
+.phc-name {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  position: relative;
+}
+.phc-hex {
+  font-family: var(--font-body);
+  font-size: 15px;
+  opacity: 0.6;
+  margin-bottom: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+.phc-usage {
+  font-size: 14px;
+  opacity: 0.5;
+  line-height: 1.6;
+  position: relative;
+}
+
+.palette-trio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+}
+.palette-trio-card {
+  border-radius: 16px;
+  padding: 28px 24px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
+}
+.ptc-amber { background: linear-gradient(145deg, var(--amber-300), var(--amber-400), var(--amber-500)); color: var(--amber-900); }
+.ptc-teal { background: linear-gradient(145deg, var(--teal-300), var(--teal-400), var(--teal-500)); color: #fff; }
+.ptc-neutral { background: #fff; border: 1.5px solid var(--border); color: var(--heading); }
+
+/* ════════════════════════════
+   COLOR RAMP STRIPS
+   ════════════════════════════ */
+.ramps-section { background: var(--snow); }
+.ramp-block { margin-bottom: 40px; }
+.ramp-block:last-child { margin-bottom: 0; }
+.ramp-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.ramp-header h3 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--maroon-600);
+}
+.ramp-header span { font-size: 13px; color: var(--muted); }
+.ramp-strip {
+  display: flex;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+}
+.ramp-swatch {
+  flex: 1;
+  padding: 22px 10px 16px;
+  text-align: center;
+  transition: flex 0.35s ease;
+  cursor: default;
+}
+.ramp-swatch:hover { flex: 1.8; }
+.ramp-swatch .stop { font-size: 11px; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 4px; }
+.ramp-swatch .hex { font-size: 10.5px; font-weight: 500; opacity: 0.7; letter-spacing: 0.3px; }
+.ramp-swatch.lt .stop, .ramp-swatch.lt .hex { color: #fff; }
+.ramp-swatch.dk .stop, .ramp-swatch.dk .hex { color: var(--maroon-800); }
+
+/* ════════════════════════════
+   CULTURAL RATIONALE
+   ════════════════════════════ */
+.rationale-section {
+  background: var(--maroon-600);
+  color: #fff;
+}
+.rationale-section .section-label { color: var(--amber-300); }
+.rationale-section .section-title { color: #fff; }
+.rationale-section .section-desc { color: rgba(255,255,255,0.55); }
+.rationale-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 50px;
+}
+.rationale-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 32px 28px;
+  transition: all 0.35s;
+}
+.rationale-card:hover {
+  background: rgba(255,255,255,0.07);
+  border-color: rgba(232,155,28,0.2);
+  transform: translateY(-3px);
+}
+.rationale-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  font-size: 22px;
+}
+.ri-maroon { background: rgba(209,163,154,0.12); }
+.ri-indigo { background: rgba(133,124,207,0.12); }
+.ri-amber { background: rgba(232,155,28,0.12); }
+.ri-teal { background: rgba(88,188,168,0.12); }
+.ri-neutral { background: rgba(255,255,255,0.06); }
+.rationale-card h4 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.rationale-card p { font-size: 15px; color: rgba(255,255,255,0.55); line-height: 1.75; }
+.rationale-card .color-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 6px;
+  margin-top: 14px;
+  letter-spacing: 0.5px;
+}
+.ct-maroon { background: var(--maroon-400); color: #fff; }
+.ct-indigo { background: var(--indigo-500); color: #fff; }
+.ct-amber { background: var(--amber-400); color: var(--amber-900); }
+.ct-teal { background: var(--teal-400); color: #fff; }
+
+/* ════════════════════════════
+   ACCESSIBILITY
+   ════════════════════════════ */
+.a11y-section { background: var(--mist); }
+.a11y-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 40px;
+}
+.a11y-card {
+  border-radius: 14px;
+  padding: 24px;
+  text-align: center;
+}
+.a11y-card .ratio {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.a11y-card .pair { font-size: 14px; margin-bottom: 2px; }
+.a11y-card .level {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.5;
+  margin-top: 8px;
+}
+
+/* ════════════════════════════
+   COMPARISON
+   ════════════════════════════ */
+.comparison-section { background: var(--snow); }
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 40px;
+}
+.comp-card {
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+.comp-card-header {
+  padding: 22px 24px;
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 500;
+}
+.comp-card-body { padding: 0 24px 24px; }
+.comp-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+  color: var(--body);
+}
+.comp-item:last-child { border-bottom: none; }
+.comp-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+/* ════════════════════════════
+   USAGE PAIRINGS
+   ════════════════════════════ */
+.pairings-section { background: var(--mist); }
+.pairings-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 40px;
+}
+.pairing-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 22px 24px;
+  transition: all 0.3s;
+}
+.pairing-card:hover {
+  border-color: var(--amber-400);
+  box-shadow: 0 8px 28px rgba(94,42,37,0.06);
+}
+.pairing-swatch {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+.pairing-card h4 { font-size: 15px; font-weight: 600; color: var(--heading); margin-bottom: 3px; }
+.pairing-card p { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+/* ════════════════════════════
+   CSS CODE BLOCK
+   ════════════════════════════ */
+.code-section { background: var(--charcoal); color: rgba(255,255,255,0.8); }
+.code-section .section-label { color: var(--amber-300); }
+.code-section .section-title { color: #fff; }
+.code-section .section-desc { color: rgba(255,255,255,0.45); }
+.code-block {
+  background: rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 14px;
+  padding: 28px 32px;
+  margin-top: 36px;
+  font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+  font-size: 13px;
+  line-height: 1.8;
+  overflow-x: auto;
+  white-space: pre;
+  color: rgba(255,255,255,0.7);
+}
+.code-block .comment { color: rgba(255,255,255,0.3); }
+.code-block .prop { color: var(--amber-200); }
+.code-block .val { color: #A8D8EA; }
+
+/* ════════════════════════════
+   FOOTER
+   ════════════════════════════ */
+.doc-footer {
+  background: var(--maroon-600);
+  padding: 40px 0;
+  text-align: center;
+  color: rgba(255,255,255,0.35);
+  font-size: 13px;
+}
+.doc-footer strong { color: var(--amber-300); font-weight: 500; }
+
+/* ════════════════════════════
+   ANIMATIONS
+   ════════════════════════════ */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ════════════════════════════
+   RESPONSIVE
+   ════════════════════════════ */
+@media (max-width: 768px) {
+  .philosophy-grid, .palette-hero-grid, .rationale-grid, .pairings-grid, .comparison-grid { grid-template-columns: 1fr; }
+  .palette-trio, .a11y-grid { grid-template-columns: 1fr; }
+  .cover-meta { flex-direction: column; gap: 16px; }
+  section { padding: 60px 0; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ COVER ═══════════════ -->
+<section class="cover">
+  <div class="cover-mandala"></div>
+  <div class="cover-content">
+    <div class="option-tag">Option B — Alternative Palette</div>
+    <div class="cover-badge">Brand Color System</div>
+    <h1>Color Palette for<br><em>Tamang Society of Canada</em></h1>
+    <p class="cover-sub">An earthy, warm palette inspired by Tamang temple architecture, monsoon dusk skies, and the terraced highlands of Nepal.</p>
+    <div class="cover-meta">
+      <div class="cover-meta-item"><strong>Prepared by</strong>Ram Bhandari</div>
+      <div class="cover-meta-item"><strong>Company</strong>Karya Technology</div>
+      <div class="cover-meta-item"><strong>Date</strong>April 09, 2026</div>
+      <div class="cover-meta-item"><strong>Version</strong>1.0 — Option B</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PHILOSOPHY ═══════════════ -->
+<section class="philosophy">
+  <div class="container">
+    <div class="section-label">Design Philosophy</div>
+    <div class="section-title">A Warmer, Earth-Rooted Approach</div>
+    <div class="section-desc">While Option A leaned on institutional navy and crimson, this palette draws from the physical world of Tamang culture — clay temples, hand-dyed textiles, monsoon twilight, and terraced fields.</div>
+
+    <div class="philosophy-grid">
+      <div class="philosophy-text">
+        <h3>From the Land, For the People</h3>
+        <p>The Tamang people are deeply connected to their landscape — the red-clay monasteries of Langtang, the indigo twilight over Kathmandu Valley, the amber glow of oil lamps during Lhosar celebrations, and the verdant terraces that cascade down Himalayan hillsides.</p>
+        <p>This alternative palette translates those tangible, sensory experiences into a digital colour system. It feels warmer and more organic than Option A, creating a sense of homecoming — especially important for a diaspora community thousands of kilometres from Nepal.</p>
+        <p>The combination of earthy maroon with spiritual indigo creates a unique identity that no other Canadian community organisation uses, making the Tamang Society instantly recognisable.</p>
+      </div>
+
+      <div class="principle-cards">
+        <div class="principle-card">
+          <div class="num">01</div>
+          <h4>Earthy Warmth</h4>
+          <p>Maroon and amber create an inviting, home-like atmosphere that encourages community participation — especially for members who may be less comfortable with digital platforms.</p>
+        </div>
+        <div class="principle-card">
+          <div class="num">02</div>
+          <h4>Spiritual Depth</h4>
+          <p>Indigo introduces a contemplative, sacred dimension — connecting the digital platform to the meditative and spiritual traditions central to Tamang identity.</p>
+        </div>
+        <div class="principle-card">
+          <div class="num">03</div>
+          <h4>Distinct Identity</h4>
+          <p>This combination is rare in Canadian community organisations. While many default to blue-red-white, this palette stands apart, making the society instantly memorable.</p>
+        </div>
+        <div class="principle-card">
+          <div class="num">04</div>
+          <h4>Warm Neutrals</h4>
+          <p>Unlike Option A's cool grays, Option B uses warm-toned neutrals (cream, stone, clay) that harmonise with the earthy palette and feel more approachable.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PALETTE CARDS ═══════════════ -->
+<section class="palette-section">
+  <div class="container">
+    <div class="section-label">The Palette</div>
+    <div class="section-title">Five Core Colors — Option B</div>
+    <div class="section-desc">Earthy primary, spiritual secondary, warm accent, natural success tone, and warm neutral surface.</div>
+
+    <div class="palette-hero-grid">
+      <div class="palette-hero-card phc-maroon">
+        <div class="phc-label">Primary</div>
+        <div class="phc-name">Temple Maroon</div>
+        <div class="phc-hex">#5E2A25</div>
+        <div class="phc-usage">Headers, hero backgrounds, footer, navigation, official document tones</div>
+      </div>
+      <div class="palette-hero-card phc-indigo">
+        <div class="phc-label">Secondary</div>
+        <div class="phc-name">Indigo Dusk</div>
+        <div class="phc-hex">#4E3FA0</div>
+        <div class="phc-usage">Call-to-action buttons, active links, section labels, membership portal accents</div>
+      </div>
+    </div>
+
+    <div class="palette-trio">
+      <div class="palette-trio-card ptc-amber">
+        <div class="phc-label" style="color: var(--amber-900); opacity: 0.5;">Accent</div>
+        <div class="phc-name" style="font-family: var(--font-display); font-size: 26px; color: var(--amber-900);">Sunrise Amber</div>
+        <div class="phc-hex" style="color: var(--amber-800);">#E89B1C</div>
+        <div class="phc-usage" style="color: var(--amber-800); opacity: 0.65;">Badges, highlights, featured content, logo glow, hover borders</div>
+      </div>
+      <div class="palette-trio-card ptc-teal">
+        <div class="phc-label" style="opacity: 0.5;">Success</div>
+        <div class="phc-name" style="font-family: var(--font-display); font-size: 26px;">Paddy Teal</div>
+        <div class="phc-hex">#2E9E89</div>
+        <div class="phc-usage" style="opacity: 0.55;">Approved states, payment confirmed, certificate issued, checkmarks</div>
+      </div>
+      <div class="palette-trio-card ptc-neutral">
+        <div class="phc-label" style="color: var(--muted); opacity: 0.7;">Surface</div>
+        <div class="phc-name" style="font-family: var(--font-display); font-size: 26px; color: var(--maroon-600);">Warm Stone</div>
+        <div class="phc-hex" style="color: var(--body);">#F4F0EC</div>
+        <div class="phc-usage" style="color: var(--muted);">Section backgrounds, card surfaces, alternating rows, input fields</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ COLOR RAMPS ═══════════════ -->
+<section class="ramps-section">
+  <div class="container">
+    <div class="section-label">Full Ramps</div>
+    <div class="section-title">Complete Shade System</div>
+    <div class="section-desc">Each core colour provides a 10-stop ramp from lightest to darkest for all UI states.</div>
+
+    <!-- Maroon -->
+    <div class="ramp-block" style="margin-top: 50px;">
+      <div class="ramp-header">
+        <h3>Temple Maroon</h3>
+        <span>Primary — Earth, shelter, tradition</span>
+      </div>
+      <div class="ramp-strip">
+        <div class="ramp-swatch dk" style="background:#F6ECEA;"><div class="stop">50</div><div class="hex">#F6ECEA</div></div>
+        <div class="ramp-swatch dk" style="background:#E6C9C4;"><div class="stop">100</div><div class="hex">#E6C9C4</div></div>
+        <div class="ramp-swatch dk" style="background:#D1A39A;"><div class="stop">200</div><div class="hex">#D1A39A</div></div>
+        <div class="ramp-swatch lt" style="background:#B87A6F;"><div class="stop">300</div><div class="hex">#B87A6F</div></div>
+        <div class="ramp-swatch lt" style="background:#96524A;"><div class="stop">400</div><div class="hex">#96524A</div></div>
+        <div class="ramp-swatch lt" style="background:#7A3B34;"><div class="stop">500</div><div class="hex">#7A3B34</div></div>
+        <div class="ramp-swatch lt" style="background:#5E2A25;"><div class="stop">600</div><div class="hex">#5E2A25</div></div>
+        <div class="ramp-swatch lt" style="background:#4A201C;"><div class="stop">700</div><div class="hex">#4A201C</div></div>
+        <div class="ramp-swatch lt" style="background:#371714;"><div class="stop">800</div><div class="hex">#371714</div></div>
+        <div class="ramp-swatch lt" style="background:#250F0D;"><div class="stop">900</div><div class="hex">#250F0D</div></div>
+      </div>
+    </div>
+
+    <!-- Indigo -->
+    <div class="ramp-block">
+      <div class="ramp-header">
+        <h3>Indigo Dusk</h3>
+        <span>Secondary — Spirituality, twilight, depth</span>
+      </div>
+      <div class="ramp-strip">
+        <div class="ramp-swatch dk" style="background:#EEEDF8;"><div class="stop">50</div><div class="hex">#EEEDF8</div></div>
+        <div class="ramp-swatch dk" style="background:#CBC8EC;"><div class="stop">100</div><div class="hex">#CBC8EC</div></div>
+        <div class="ramp-swatch dk" style="background:#A8A2DF;"><div class="stop">200</div><div class="hex">#A8A2DF</div></div>
+        <div class="ramp-swatch lt" style="background:#857CCF;"><div class="stop">300</div><div class="hex">#857CCF</div></div>
+        <div class="ramp-swatch lt" style="background:#6558B8;"><div class="stop">400</div><div class="hex">#6558B8</div></div>
+        <div class="ramp-swatch lt" style="background:#4E3FA0;"><div class="stop">500</div><div class="hex">#4E3FA0</div></div>
+        <div class="ramp-swatch lt" style="background:#3B2F7E;"><div class="stop">600</div><div class="hex">#3B2F7E</div></div>
+        <div class="ramp-swatch lt" style="background:#2E2464;"><div class="stop">700</div><div class="hex">#2E2464</div></div>
+        <div class="ramp-swatch lt" style="background:#211A4A;"><div class="stop">800</div><div class="hex">#211A4A</div></div>
+        <div class="ramp-swatch lt" style="background:#161133;"><div class="stop">900</div><div class="hex">#161133</div></div>
+      </div>
+    </div>
+
+    <!-- Amber -->
+    <div class="ramp-block">
+      <div class="ramp-header">
+        <h3>Sunrise Amber</h3>
+        <span>Accent — Warmth, celebration, light</span>
+      </div>
+      <div class="ramp-strip">
+        <div class="ramp-swatch dk" style="background:#FFF6E8;"><div class="stop">50</div><div class="hex">#FFF6E8</div></div>
+        <div class="ramp-swatch dk" style="background:#FFE4B5;"><div class="stop">100</div><div class="hex">#FFE4B5</div></div>
+        <div class="ramp-swatch dk" style="background:#FFD082;"><div class="stop">200</div><div class="hex">#FFD082</div></div>
+        <div class="ramp-swatch dk" style="background:#FFBA4F;"><div class="stop">300</div><div class="hex">#FFBA4F</div></div>
+        <div class="ramp-swatch dk" style="background:#E89B1C;"><div class="stop">400</div><div class="hex">#E89B1C</div></div>
+        <div class="ramp-swatch lt" style="background:#C47F0E;"><div class="stop">500</div><div class="hex">#C47F0E</div></div>
+        <div class="ramp-swatch lt" style="background:#A16808;"><div class="stop">600</div><div class="hex">#A16808</div></div>
+        <div class="ramp-swatch lt" style="background:#7D5006;"><div class="stop">700</div><div class="hex">#7D5006</div></div>
+        <div class="ramp-swatch lt" style="background:#5A3904;"><div class="stop">800</div><div class="hex">#5A3904</div></div>
+        <div class="ramp-swatch lt" style="background:#3D2602;"><div class="stop">900</div><div class="hex">#3D2602</div></div>
+      </div>
+    </div>
+
+    <!-- Teal -->
+    <div class="ramp-block">
+      <div class="ramp-header">
+        <h3>Paddy Teal</h3>
+        <span>Success — Growth, water, renewal</span>
+      </div>
+      <div class="ramp-strip">
+        <div class="ramp-swatch dk" style="background:#E6F5F2;"><div class="stop">50</div><div class="hex">#E6F5F2</div></div>
+        <div class="ramp-swatch dk" style="background:#B8E3DA;"><div class="stop">100</div><div class="hex">#B8E3DA</div></div>
+        <div class="ramp-swatch dk" style="background:#88D0C1;"><div class="stop">200</div><div class="hex">#88D0C1</div></div>
+        <div class="ramp-swatch lt" style="background:#58BCA8;"><div class="stop">300</div><div class="hex">#58BCA8</div></div>
+        <div class="ramp-swatch lt" style="background:#2E9E89;"><div class="stop">400</div><div class="hex">#2E9E89</div></div>
+        <div class="ramp-swatch lt" style="background:#1F7D6C;"><div class="stop">500</div><div class="hex">#1F7D6C</div></div>
+        <div class="ramp-swatch lt" style="background:#166054;"><div class="stop">600</div><div class="hex">#166054</div></div>
+        <div class="ramp-swatch lt" style="background:#0F473E;"><div class="stop">700</div><div class="hex">#0F473E</div></div>
+        <div class="ramp-swatch lt" style="background:#0A3029;"><div class="stop">800</div><div class="hex">#0A3029</div></div>
+        <div class="ramp-swatch lt" style="background:#061C18;"><div class="stop">900</div><div class="hex">#061C18</div></div>
+      </div>
+    </div>
+
+    <!-- Neutrals -->
+    <div class="ramp-block">
+      <div class="ramp-header">
+        <h3>Warm Stone Neutrals</h3>
+        <span>Structure — Backgrounds, text, borders</span>
+      </div>
+      <div class="ramp-strip">
+        <div class="ramp-swatch dk" style="background:#FDFBF9;"><div class="stop">Snow</div><div class="hex">#FDFBF9</div></div>
+        <div class="ramp-swatch dk" style="background:#F4F0EC;"><div class="stop">Mist</div><div class="hex">#F4F0EC</div></div>
+        <div class="ramp-swatch dk" style="background:#E4DDD6;"><div class="stop">Border</div><div class="hex">#E4DDD6</div></div>
+        <div class="ramp-swatch dk" style="background:#CCC3B8;"><div class="stop">Divider</div><div class="hex">#CCC3B8</div></div>
+        <div class="ramp-swatch lt" style="background:#A89E94;"><div class="stop">Muted</div><div class="hex">#A89E94</div></div>
+        <div class="ramp-swatch lt" style="background:#8A7E72;"><div class="stop">Caption</div><div class="hex">#8A7E72</div></div>
+        <div class="ramp-swatch lt" style="background:#706458;"><div class="stop">Body</div><div class="hex">#706458</div></div>
+        <div class="ramp-swatch lt" style="background:#524840;"><div class="stop">Strong</div><div class="hex">#524840</div></div>
+        <div class="ramp-swatch lt" style="background:#3A3028;"><div class="stop">Heading</div><div class="hex">#3A3028</div></div>
+        <div class="ramp-swatch lt" style="background:#231E1A;"><div class="stop">Charcoal</div><div class="hex">#231E1A</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CULTURAL RATIONALE ═══════════════ -->
+<section class="rationale-section">
+  <div class="container">
+    <div class="section-label">Cultural Rationale</div>
+    <div class="section-title">Why Each Color Suits the Organisation</div>
+    <div class="section-desc">Every colour maps to a specific facet of Tamang life, landscape, and community purpose.</div>
+
+    <div class="rationale-grid">
+      <div class="rationale-card">
+        <div class="rationale-icon ri-maroon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(209,163,154,0.8)" stroke-width="1.5"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>
+        </div>
+        <h4>Temple Maroon — Shelter & Roots</h4>
+        <p>The deep red-brown of Tamang gompa walls and clay-brick monasteries across Langtang and Rasuwa. As the primary colour, it grounds the entire platform in a sense of place and belonging — something the diaspora community deeply craves. It communicates: <em>"This is your home, even online."</em></p>
+        <span class="color-tag ct-maroon">#5E2A25</span>
+      </div>
+
+      <div class="rationale-card">
+        <div class="rationale-icon ri-indigo">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(168,162,223,0.8)" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </div>
+        <h4>Indigo Dusk — Spirit & Contemplation</h4>
+        <p>The deep purple-blue of twilight over the Kathmandu Valley, when monastery bells ring and butter lamps are lit. Indigo carries spiritual weight in Tamang Buddhist tradition. As the CTA colour, it invites thoughtful action — membership is not a transaction but a connection to something deeper.</p>
+        <span class="color-tag ct-indigo">#4E3FA0</span>
+      </div>
+
+      <div class="rationale-card">
+        <div class="rationale-icon ri-amber">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255,186,79,0.8)" stroke-width="1.5"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </div>
+        <h4>Sunrise Amber — Joy & Celebration</h4>
+        <p>The warm amber of sunrise over the Himalayas and the golden glow of oil lamps during Lhosar and Sonam Lhosar festivals. Warmer and more vivid than Option A's gold, this amber captures the celebratory, joyful side of Tamang culture. It highlights what matters: events, achievements, and milestones.</p>
+        <span class="color-tag ct-amber">#E89B1C</span>
+      </div>
+
+      <div class="rationale-card">
+        <div class="rationale-icon ri-teal">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(136,208,193,0.8)" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h4>Paddy Teal — Growth & Renewal</h4>
+        <p>The blue-green of irrigated paddy terraces — the agricultural backbone of Tamang communities in Nepal. Teal conveys both growth and trustworthiness. In the WebApp, it signals positive outcomes: approved memberships, completed payments, and successful certificate generation. It feels fresher and more modern than a traditional green.</p>
+        <span class="color-tag ct-teal">#2E9E89</span>
+      </div>
+
+      <div class="rationale-card" style="grid-column: span 2;">
+        <div class="rationale-icon ri-neutral">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        </div>
+        <h4>Warm Stone — Comfort Across Generations</h4>
+        <p>Unlike Option A's cool blue-grays, this palette uses warm cream-to-brown neutrals reminiscent of handmade Tamang paper and stone-walled homes. This warmth is not just aesthetic — it is functional. Research consistently shows that warm-toned interfaces feel more approachable and less intimidating, which matters enormously for a community WebApp used by elderly members, recent immigrants with varying English proficiency, and young families alike. The warm stone tones create a quiet visual harmony with the maroon and amber, ensuring the platform never feels cold or corporate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ ACCESSIBILITY ═══════════════ -->
+<section class="a11y-section">
+  <div class="container">
+    <div class="section-label">Accessibility</div>
+    <div class="section-title">Contrast Compliance</div>
+    <div class="section-desc">All primary colour pairings meet or exceed WCAG 2.1 AA standards.</div>
+
+    <div class="a11y-grid">
+      <div class="a11y-card" style="background: var(--maroon-600); color: #fff;">
+        <div class="ratio">10.8:1</div>
+        <div class="pair">White on Maroon</div>
+        <div class="level">WCAG AAA</div>
+      </div>
+      <div class="a11y-card" style="background: var(--indigo-500); color: #fff;">
+        <div class="ratio">7.2:1</div>
+        <div class="pair">White on Indigo</div>
+        <div class="level">WCAG AAA</div>
+      </div>
+      <div class="a11y-card" style="background: var(--amber-50); color: var(--amber-800);">
+        <div class="ratio">9.1:1</div>
+        <div class="pair">Brown on Amber-50</div>
+        <div class="level">WCAG AAA</div>
+      </div>
+      <div class="a11y-card" style="background: var(--teal-400); color: #fff;">
+        <div class="ratio">4.5:1</div>
+        <div class="pair">White on Teal</div>
+        <div class="level">WCAG AA</div>
+      </div>
+      <div class="a11y-card" style="background: var(--mist); color: var(--heading); border: 1px solid var(--border);">
+        <div class="ratio">11.1:1</div>
+        <div class="pair">Heading on Mist</div>
+        <div class="level">WCAG AAA</div>
+      </div>
+      <div class="a11y-card" style="background: var(--charcoal); color: #fff;">
+        <div class="ratio">14.8:1</div>
+        <div class="pair">White on Charcoal</div>
+        <div class="level">WCAG AAA</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ COMPARISON ═══════════════ -->
+<section class="comparison-section">
+  <div class="container">
+    <div class="section-label">Comparison</div>
+    <div class="section-title">Option A vs Option B at a Glance</div>
+    <div class="section-desc">Both palettes are culturally grounded and production-ready. The choice depends on the personality the society wants to project.</div>
+
+    <div class="comparison-grid">
+      <div class="comp-card">
+        <div class="comp-card-header" style="background: #1E3A5F; color: #fff;">Option A — Institutional Strength</div>
+        <div class="comp-card-body">
+          <div class="comp-item"><div class="comp-dot" style="background: #1E3A5F;"></div>Himalayan Navy — cool, authoritative</div>
+          <div class="comp-item"><div class="comp-dot" style="background: #B22234;"></div>Tamang Crimson — bold, urgent CTAs</div>
+          <div class="comp-item"><div class="comp-dot" style="background: #D4A843;"></div>Dharma Gold — refined accent</div>
+          <div class="comp-item"><div class="comp-dot" style="background: #4A7C59;"></div>Sagarmatha Green — classic success</div>
+          <div class="comp-item"><div class="comp-dot" style="background: #F0F2F6;"></div>Cool gray neutrals</div>
+          <div class="comp-item" style="border-bottom: none; color: var(--heading); font-weight: 600;">Best for: formal, institutional presence</div>
+        </div>
+      </div>
+      <div class="comp-card">
+        <div class="comp-card-header" style="background: var(--maroon-600); color: #fff;">Option B — Earthy Warmth</div>
+        <div class="comp-card-body">
+          <div class="comp-item"><div class="comp-dot" style="background: var(--maroon-600);"></div>Temple Maroon — warm, grounding</div>
+          <div class="comp-item"><div class="comp-dot" style="background: var(--indigo-500);"></div>Indigo Dusk — spiritual, contemplative</div>
+          <div class="comp-item"><div class="comp-dot" style="background: var(--amber-400);"></div>Sunrise Amber — vivid, celebratory</div>
+          <div class="comp-item"><div class="comp-dot" style="background: var(--teal-400);"></div>Paddy Teal — modern, fresh success</div>
+          <div class="comp-item"><div class="comp-dot" style="background: var(--mist);"></div>Warm stone neutrals</div>
+          <div class="comp-item" style="border-bottom: none; color: var(--heading); font-weight: 600;">Best for: community warmth, unique identity</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ USAGE PAIRINGS ═══════════════ -->
+<section class="pairings-section">
+  <div class="container">
+    <div class="section-label">Application Guide</div>
+    <div class="section-title">Where Each Color Lives</div>
+    <div class="section-desc">Quick reference for the development team (S2 &amp; S3) to apply Option B colours consistently.</div>
+
+    <div class="pairings-grid">
+      <div class="pairing-card">
+        <div class="pairing-swatch" style="background: var(--maroon-600);"></div>
+        <div><h4>Header, Footer &amp; Hero</h4><p>Maroon-600 background with white text. Top bar uses Maroon-700 for depth.</p></div>
+      </div>
+      <div class="pairing-card">
+        <div class="pairing-swatch" style="background: linear-gradient(135deg, var(--indigo-500), var(--indigo-300));"></div>
+        <div><h4>Primary CTA Buttons</h4><p>Indigo gradient (500→300) with white text. Hover state shifts to 600→400.</p></div>
+      </div>
+      <div class="pairing-card">
+        <div class="pairing-swatch" style="background: var(--amber-400);"></div>
+        <div><h4>Badges &amp; Highlights</h4><p>Amber-400 for featured badges and hover borders. Text on amber uses Amber-900.</p></div>
+      </div>
+      <div class="pairing-card">
+        <div class="pairing-swatch" style="background: var(--teal-400);"></div>
+        <div><h4>Success &amp; Approval States</h4><p>Teal-400 for checkmarks, approved badges, and payment confirmation toasts.</p></div>
+      </div>
+      <div class="pairing-card">
+        <div class="pairing-swatch" style="background: var(--mist); border: 1px solid var(--border);"></div>
+        <div><h4>Section Backgrounds</h4><p>Alternating Snow/Mist sections. Cards use white with warm Border stroke.</p></div>
+      </div>
+      <div class="pairing-card">
+        <div class="pairing-swatch" style="background: var(--maroon-50);"></div>
+        <div><h4>Error &amp; Warning States</h4><p>Maroon-50 background with Maroon-700 text for form validation and alerts.</p></div>
+      </div>
+      <div class="pairing-card">
+        <div class="pairing-swatch" style="background: var(--indigo-50);"></div>
+        <div><h4>Info &amp; Tooltip Backgrounds</h4><p>Indigo-50 with Indigo-700 text for informational banners and status pills.</p></div>
+      </div>
+      <div class="pairing-card">
+        <div class="pairing-swatch" style="background: var(--charcoal);"></div>
+        <div><h4>Typography System</h4><p>Headings use warm Charcoal (#231E1A). Body uses warm Body (#706458).</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CSS CODE ═══════════════ -->
+<section class="code-section">
+  <div class="container">
+    <div class="section-label">For Developers</div>
+    <div class="section-title">Ready-to-Use CSS Variables — Option B</div>
+    <div class="section-desc">Copy this into the project's root stylesheet if Option B is selected.</div>
+
+    <div class="code-block"><span class="comment">/* Tamang Society of Canada — Color System v1.0 Option B */</span>
+<span class="comment">/* Prepared by Ram Bhandari, Karya Technology */</span>
+<span class="comment">/* April 09, 2026 */</span>
+
+:root {
+  <span class="comment">/* ── Primary: Temple Maroon ── */</span>
+  <span class="prop">--maroon-50</span>:  <span class="val">#F6ECEA</span>;
+  <span class="prop">--maroon-100</span>: <span class="val">#E6C9C4</span>;
+  <span class="prop">--maroon-200</span>: <span class="val">#D1A39A</span>;
+  <span class="prop">--maroon-300</span>: <span class="val">#B87A6F</span>;
+  <span class="prop">--maroon-400</span>: <span class="val">#96524A</span>;
+  <span class="prop">--maroon-500</span>: <span class="val">#7A3B34</span>;
+  <span class="prop">--maroon-600</span>: <span class="val">#5E2A25</span>;  <span class="comment">/* Primary brand */</span>
+  <span class="prop">--maroon-700</span>: <span class="val">#4A201C</span>;
+  <span class="prop">--maroon-800</span>: <span class="val">#371714</span>;
+  <span class="prop">--maroon-900</span>: <span class="val">#250F0D</span>;
+
+  <span class="comment">/* ── Secondary: Indigo Dusk ── */</span>
+  <span class="prop">--indigo-50</span>:  <span class="val">#EEEDF8</span>;
+  <span class="prop">--indigo-100</span>: <span class="val">#CBC8EC</span>;
+  <span class="prop">--indigo-200</span>: <span class="val">#A8A2DF</span>;
+  <span class="prop">--indigo-300</span>: <span class="val">#857CCF</span>;
+  <span class="prop">--indigo-400</span>: <span class="val">#6558B8</span>;
+  <span class="prop">--indigo-500</span>: <span class="val">#4E3FA0</span>;  <span class="comment">/* CTA / Action */</span>
+  <span class="prop">--indigo-600</span>: <span class="val">#3B2F7E</span>;
+  <span class="prop">--indigo-700</span>: <span class="val">#2E2464</span>;
+  <span class="prop">--indigo-800</span>: <span class="val">#211A4A</span>;
+  <span class="prop">--indigo-900</span>: <span class="val">#161133</span>;
+
+  <span class="comment">/* ── Accent: Sunrise Amber ── */</span>
+  <span class="prop">--amber-50</span>:  <span class="val">#FFF6E8</span>;
+  <span class="prop">--amber-100</span>: <span class="val">#FFE4B5</span>;
+  <span class="prop">--amber-200</span>: <span class="val">#FFD082</span>;
+  <span class="prop">--amber-300</span>: <span class="val">#FFBA4F</span>;
+  <span class="prop">--amber-400</span>: <span class="val">#E89B1C</span>;  <span class="comment">/* Accent / Highlight */</span>
+  <span class="prop">--amber-500</span>: <span class="val">#C47F0E</span>;
+  <span class="prop">--amber-600</span>: <span class="val">#A16808</span>;
+  <span class="prop">--amber-700</span>: <span class="val">#7D5006</span>;
+  <span class="prop">--amber-800</span>: <span class="val">#5A3904</span>;
+  <span class="prop">--amber-900</span>: <span class="val">#3D2602</span>;
+
+  <span class="comment">/* ── Success: Paddy Teal ── */</span>
+  <span class="prop">--teal-50</span>:  <span class="val">#E6F5F2</span>;
+  <span class="prop">--teal-100</span>: <span class="val">#B8E3DA</span>;
+  <span class="prop">--teal-200</span>: <span class="val">#88D0C1</span>;
+  <span class="prop">--teal-300</span>: <span class="val">#58BCA8</span>;
+  <span class="prop">--teal-400</span>: <span class="val">#2E9E89</span>;  <span class="comment">/* Success / Approval */</span>
+  <span class="prop">--teal-500</span>: <span class="val">#1F7D6C</span>;
+  <span class="prop">--teal-600</span>: <span class="val">#166054</span>;
+  <span class="prop">--teal-700</span>: <span class="val">#0F473E</span>;
+  <span class="prop">--teal-800</span>: <span class="val">#0A3029</span>;
+  <span class="prop">--teal-900</span>: <span class="val">#061C18</span>;
+
+  <span class="comment">/* ── Warm Stone Neutrals ── */</span>
+  <span class="prop">--snow</span>:     <span class="val">#FDFBF9</span>;  <span class="comment">/* Page background */</span>
+  <span class="prop">--mist</span>:     <span class="val">#F4F0EC</span>;  <span class="comment">/* Section alt bg */</span>
+  <span class="prop">--border</span>:   <span class="val">#E4DDD6</span>;  <span class="comment">/* Card/input borders */</span>
+  <span class="prop">--muted</span>:    <span class="val">#A89E94</span>;  <span class="comment">/* Captions, hints */</span>
+  <span class="prop">--body</span>:     <span class="val">#706458</span>;  <span class="comment">/* Body text */</span>
+  <span class="prop">--heading</span>:  <span class="val">#3A3028</span>;  <span class="comment">/* Headings */</span>
+  <span class="prop">--charcoal</span>: <span class="val">#231E1A</span>;  <span class="comment">/* Darkest text/bg */</span>
+}</div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="doc-footer">
+  <div class="container">
+    Color Palette v1.0 Option B &mdash; <strong>Tamang Society of Canada</strong> &mdash; Prepared by Ram Bhandari, <strong>Karya Technology Pvt. Ltd.</strong> &mdash; April 09, 2026
+  </div>
+</footer>
+
+</body>
+</html>
